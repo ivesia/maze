@@ -1,0 +1,22 @@
+{
+  "name": "@alphatr/maze",
+  "version": "1.0.0",
+  "description": "random password",
+  "main": "index.js",
+  "author": {
+    "name": "AlphaTr",
+    "email": "alphatr@alphatr.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@alphatr/eslint-config-node": "^1.1.0",
+    "eslint": "^4.19.1"
+  },
+  "dependencies": {
+    "@alphatr/publicsuffix": "^1.0.1",
+    "bignumber.js": "^7.0.1",
+    "md5.js": "^1.3.4",
+    "punycode": "^2.1.0",
+    "url-parse": "^1.4.0"
+  }
+}
