@@ -5,9 +5,13 @@ const publicsuffix = require('@alphatr/publicsuffix');
 
 const generator = require('./generator');
 
-const getSuffixDomain = function getSuffixDomain(link) {
-    const url = new URL(link);
-    const hostname = punycode.toUnicode(punycode.toASCII(url.hostname || link));
+const getSuffixDomain = function getSuffixDomain(hostname) {
+    if (/^https?:\/\//i.test(hostname)) {
+        const url = new URL(hostname);
+        hostname = url.hostname;
+    }
+
+    hostname = punycode.toUnicode(punycode.toASCII(hostname));
     const [result] = publicsuffix.extract(hostname);
     const resultReg = new RegExp('([^.]+\\.)?' + result.replace(/\./g, '\\.') + '$', 'i');
     return punycode.toASCII(resultReg.exec(hostname)[0]);
