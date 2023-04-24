@@ -10,7 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "@alphatr/eslint-config-node": "^1.1.0",
-    "eslint": "^4.19.1"
+    "eslint": "^8.39.0"
   },
   "dependencies": {
     "@alphatr/publicsuffix": "^1.1.0",
